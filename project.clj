@@ -9,7 +9,12 @@
                  [ring/ring-json "0.5.0"]
                  [org.clojure/java.jdbc "0.7.5"]
                  [org.xerial/sqlite-jdbc "3.7.2"]
-                 [compojure "1.6.1"]]
+                 [compojure "1.6.1"]
+                 [hiccup "1.0.5"]
+                 [org.clojure/tools.namespace "1.1.0"]
+                 
+                 ;; Authentication
+                 [com.cemerick/friend "0.2.3"]]
   :main ^:skip-aot flashcard.server.core
   :target-path "target/%s"
   :profiles {:dev-server  {:dependencies [[com.jakemccrary/reload "0.1.0"]

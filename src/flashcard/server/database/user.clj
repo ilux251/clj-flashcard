@@ -6,7 +6,6 @@
   [uuid]
   (j/query db (str "select * from user where uuid = '" uuid "'")))
 
-(defn auth-user
-  [username password]
-  (let [result (j/query db (str "select count(*) as auth from user where username = '" username "' and password = '" password "'"))]
-    result))
+(defn get-user-by-username
+  [username]
+  (j/query db (str "select * from user where username = '" username "'")))
